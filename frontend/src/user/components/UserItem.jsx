@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./userItem.css";
-import Avatar from "../../shared/components/Avatar";
-import routes from "../../router/constants/routes";
-import Card from "../../shared/components/Card";
+import Avatar from "@/shared/components/UI/Avatar";
+import Card from "@/shared/components/UI/Card";
+import routes from "@/router/constants/routes";
 //* UserItem function gets props from UsersList.jsx Page
 const UserItem = (props) => {
   // return user list that contains name, image and placeCount (how many places user has posted)

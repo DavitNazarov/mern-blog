@@ -1,4 +1,4 @@
-import AppRouters from "./router/AppRouters";
+import AppRouters from "@/router/AppRouters";
 function App() {
   return (
     <div>
