@@ -1,9 +1,13 @@
 import AppRouters from "@/router/AppRouters";
+import MainNavigation from "@/shared/components/Navigation/MainNavigation";
 function App() {
   return (
-    <div>
-      <AppRouters />
-    </div>
+    <>
+      <MainNavigation />
+      <main>
+        <AppRouters />
+      </main>
+    </>
   );
 }
 
