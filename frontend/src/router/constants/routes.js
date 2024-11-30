@@ -1,6 +1,6 @@
 const users = "/";
 const newPlaces = "/places/new";
-const userPlace = "/:id/places";
+const userPlace = "/places/";
 const routes = {
   users,
   newPlaces,

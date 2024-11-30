@@ -17,11 +17,6 @@ export const appRoutes = [
     Element: NewPlace,
   },
   {
-    //* Route for new places page
-    path: routes.userPlace,
-    Element: NewPlace, //! soon gonna change
-  },
-  {
     //* Fallback route  for undefined path
     path: "*",
     Element: Users, //* Redirect user  instead of "not found" Page ;)
