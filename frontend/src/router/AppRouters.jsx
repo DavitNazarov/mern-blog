@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { appRoutes } from "./config/routes";
 import UserPlaces from "@/places/pages/UserPlaces";
 import routes from "./constants/routes";
+import NewPlace from "@/places/pages/NewPlace";
 
 const AppRouters = () => {
   return (

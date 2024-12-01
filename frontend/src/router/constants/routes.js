@@ -1,5 +1,5 @@
 const users = "/";
-const newPlaces = "/places/new";
+const newPlaces = "new/places/";
 const userPlace = "/places/";
 const routes = {
   users,
