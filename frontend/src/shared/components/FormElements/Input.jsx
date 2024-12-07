@@ -62,6 +62,7 @@ const Input = (props) => {
       />
     ) : (
       <textarea
+        style={{ maxWidth: "100%" }}
         id={props.id}
         rows={props.rows || 3}
         onChange={changeHandler}

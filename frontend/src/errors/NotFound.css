@@ -1,0 +1,16 @@
+.not_found--box {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+}
+.not_found--title {
+  color: white;
+  font-weight: 500;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.not_found--redirect {
+  color: white;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+}

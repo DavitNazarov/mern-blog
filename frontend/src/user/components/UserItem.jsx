@@ -10,7 +10,7 @@ const UserItem = (props) => {
   return (
     <li className="user-item">
       <Card className="user-item__content">
-        <Link to={`${routes.userPlace.concat(props.id)}`}>
+        <Link to={routes.userPlace.replace(":id", props.id)}>
           <div className="user-item__image">
             <Avatar image={props.image} alt={props.image} />
           </div>
