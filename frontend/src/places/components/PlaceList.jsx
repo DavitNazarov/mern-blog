@@ -2,6 +2,8 @@ import React from "react";
 import "./PlaceList.css";
 import Card from "@/shared/components/UI/Card";
 import PlaceItem from "./PlaceItem";
+import Button from "@/shared/components/FormElements/Button";
+import routes from "@/router/constants/routes";
 
 const PlaceList = (props) => {
   if (props.items.length === 0) {
@@ -9,7 +11,7 @@ const PlaceList = (props) => {
       <div className="place-list center">
         <Card>
           <h2>No places found.Create?</h2>
-          <button> Share Place </button>
+          <Button to={routes.newPlaces}> Share Place </Button>
         </Card>
       </div>
     );

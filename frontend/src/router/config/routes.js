@@ -6,33 +6,53 @@ import Users from "../../user/pages/Users";
 import NotFound from "@/errors/NotFound";
 import UserPlaces from "@/places/pages/UserPlaces";
 import UpdatePlace from "@/places/pages/UpdatePlace";
+import Auth from "@/user/pages/Auth";
 
 //* Application routes
 export const appRoutes = [
   {
-    //* Route for user page
     path: routes.users,
     Element: Users,
   },
   {
-    //* Route for new places page
+    path: routes.userPlace,
+    Element: UserPlaces,
+  },
+
+  // AUTH
+  {
+    path: routes.auth,
+    Element: Auth,
+  },
+
+  //* Fallback route  for undefined path
+  {
+    path: "*",
+    Element: NotFound,
+  },
+];
+
+// private routes
+export const privateRoutes = [
+  {
+    path: routes.users,
+    Element: Users,
+  },
+  {
     path: routes.userPlace,
     Element: UserPlaces,
   },
   {
-    //* Route for new places page
     path: routes.newPlaces,
     Element: NewPlace,
   },
   {
-    //* Route for new places page
     path: routes.PlaceId,
     Element: UpdatePlace,
   },
 
   {
-    //* Fallback route  for undefined path
     path: "*",
-    Element: NotFound, //* Redirect user  instead of "not found" Page ;)
+    Element: NotFound,
   },
 ];

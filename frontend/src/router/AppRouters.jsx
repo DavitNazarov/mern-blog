@@ -1,19 +1,27 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { appRoutes } from "./config/routes";
+import { appRoutes, privateRoutes } from "./config/routes";
 
-const AppRouters = () => {
-  console.log(appRoutes);
-
-  return (
-    // Creating App routers
-    <Routes>
-      {/* // Mapping  Route */}
+const AppRouters = (props) => {
+  const privetRoute = (
+    <>
+      {privateRoutes.map((route) => (
+        <Route key={route.path} path={route.path} Component={route.Element} />
+      ))}
+    </>
+  );
+  const publicRoute = (
+    <>
       {appRoutes.map((route) => (
         <Route key={route.path} path={route.path} Component={route.Element} />
       ))}
-    </Routes>
+    </>
   );
+  if (props.checkValidity) {
+    return <Routes>{privetRoute}</Routes>;
+  } else {
+    return <Routes>{publicRoute}</Routes>;
+  }
 };
 
 export default AppRouters;
