@@ -15,7 +15,9 @@ const NavLinks = (props) => {
       {auth.isLoggedIn && (
         <>
           <li>
-            <NavLink to={routes.userPlace}>My places </NavLink>
+            <NavLink to={routes.userPlace.replace(":id", "u1")}>
+              My places{" "}
+            </NavLink>
           </li>
 
           <li>
@@ -26,6 +28,11 @@ const NavLinks = (props) => {
       {!auth.isLoggedIn && (
         <li>
           <NavLink to={routes.auth}> AUTHENTICATE </NavLink>
+        </li>
+      )}
+      {auth.isLoggedIn && (
+        <li>
+          <button onClick={auth.logout}>LOG OUT </button>
         </li>
       )}
     </ul>
